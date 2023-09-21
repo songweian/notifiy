@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import pro.notifiy.server.core.HttpResult;
+import pro.notifiy.server.core.R;
 import pro.notifiy.server.service.UnionSendService;
 
 @Slf4j
@@ -16,7 +17,10 @@ public class SendController {
 
     @PostMapping("/send")
     public HttpResult send(@RequestBody SendRequest request) {
-        SendResult sendResult = unionSendService.send(request);
-        return HttpResult.ok(sendResult);
+        R<SendResult> sendResult = unionSendService.send(request);
+        if (sendResult.isError()) {
+            return HttpResult.error500();
+        }
+        return HttpResult.ok(sendResult.data());
     }
 }
