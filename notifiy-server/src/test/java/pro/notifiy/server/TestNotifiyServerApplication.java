@@ -19,7 +19,6 @@ public class TestNotifiyServerApplication {
 
 	@Bean
 	@ServiceConnection(name = "redis")
-	@SuppressWarnings("rawtypes")
 	GenericContainer<?> redisContainer() {
 		return new GenericContainer<>(DockerImageName.parse("redis:latest")).withExposedPorts(6379);
 	}
