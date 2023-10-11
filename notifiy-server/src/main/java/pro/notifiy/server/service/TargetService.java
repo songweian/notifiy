@@ -4,7 +4,7 @@ package pro.notifiy.server.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import pro.notifiy.server.api.TargetType;
+import pro.notifiy.server.model.TargetType;
 
 import java.util.Collections;
 import java.util.List;

@@ -16,6 +16,31 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>pro.justmine</groupId>
+            <artifactId>commons-result</artifactId>
+            <version>${revsion}</version>
+        </dependency>
+        <dependency>
+            <groupId>pro.justmine</groupId>
+            <artifactId>commons-gson</artifactId>
+            <version>${revsion}</version>
+        </dependency>
+        <dependency>
+            <groupId>pro.justmine</groupId>
+            <artifactId>commons-jooq</artifactId>
+            <version>${revsion}</version>
+        </dependency>
+        <dependency>
+            <groupId>pro.justmine</groupId>
+            <artifactId>commons-mdc</artifactId>
+            <version>${revsion}</version>
+        </dependency>
+        <dependency>
+            <groupId>pro.justmine</groupId>
+            <artifactId>commons-webfilter</artifactId>
+            <version>${revsion}</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.camel.springboot</groupId>
             <artifactId>camel-spring-boot-starter</artifactId>
             <version>4.0.0</version>
@@ -111,12 +136,6 @@
             <artifactId>mysql</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
-            <!--                        <version>8.2.0</version>-->
-            <version>9.22.2</version>
-        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -153,6 +172,7 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>9.22.2</version>
                 <configuration>
+                    <cleanDisabled>false</cleanDisabled>
                     <configFiles>
                         <configFile>src/main/resources/flyway.conf</configFile>
                     </configFiles>

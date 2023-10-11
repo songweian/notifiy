@@ -11,8 +11,21 @@ import org.jooq.Catalog;
 import org.jooq.Table;
 import org.jooq.impl.SchemaImpl;
 
-import pro.notifiy.server.jooq.tables.Department;
-import pro.notifiy.server.jooq.tables.Employee;
+import pro.notifiy.server.jooq.tables.App;
+import pro.notifiy.server.jooq.tables.Channel;
+import pro.notifiy.server.jooq.tables.CorpWxTemplate;
+import pro.notifiy.server.jooq.tables.DingdingBotTemplate;
+import pro.notifiy.server.jooq.tables.FeishuBotTemplate;
+import pro.notifiy.server.jooq.tables.MailBotTemplate;
+import pro.notifiy.server.jooq.tables.PushTemplate;
+import pro.notifiy.server.jooq.tables.SendDetail;
+import pro.notifiy.server.jooq.tables.SendRequest;
+import pro.notifiy.server.jooq.tables.SendTask;
+import pro.notifiy.server.jooq.tables.SmsCloudTemplate;
+import pro.notifiy.server.jooq.tables.SmsTemplate;
+import pro.notifiy.server.jooq.tables.TemplateChannel;
+import pro.notifiy.server.jooq.tables.WxMiniappTemplate;
+import pro.notifiy.server.jooq.tables.WxOffiaccountTemplate;
 
 
 /**
@@ -29,14 +42,79 @@ public class Notify extends SchemaImpl {
     public static final Notify NOTIFY = new Notify();
 
     /**
-     * The table <code>notify.department</code>.
+     * The table <code>notify.app</code>.
      */
-    public final Department DEPARTMENT = Department.DEPARTMENT;
+    public final App APP = App.APP;
 
     /**
-     * The table <code>notify.employee</code>.
+     * The table <code>notify.channel</code>.
      */
-    public final Employee EMPLOYEE = Employee.EMPLOYEE;
+    public final Channel CHANNEL = Channel.CHANNEL;
+
+    /**
+     * The table <code>notify.corp_wx_template</code>.
+     */
+    public final CorpWxTemplate CORP_WX_TEMPLATE = CorpWxTemplate.CORP_WX_TEMPLATE;
+
+    /**
+     * The table <code>notify.dingding_bot_template</code>.
+     */
+    public final DingdingBotTemplate DINGDING_BOT_TEMPLATE = DingdingBotTemplate.DINGDING_BOT_TEMPLATE;
+
+    /**
+     * The table <code>notify.feishu_bot_template</code>.
+     */
+    public final FeishuBotTemplate FEISHU_BOT_TEMPLATE = FeishuBotTemplate.FEISHU_BOT_TEMPLATE;
+
+    /**
+     * The table <code>notify.mail_bot_template</code>.
+     */
+    public final MailBotTemplate MAIL_BOT_TEMPLATE = MailBotTemplate.MAIL_BOT_TEMPLATE;
+
+    /**
+     * The table <code>notify.push_template</code>.
+     */
+    public final PushTemplate PUSH_TEMPLATE = PushTemplate.PUSH_TEMPLATE;
+
+    /**
+     * The table <code>notify.send_detail</code>.
+     */
+    public final SendDetail SEND_DETAIL = SendDetail.SEND_DETAIL;
+
+    /**
+     * The table <code>notify.send_request</code>.
+     */
+    public final SendRequest SEND_REQUEST = SendRequest.SEND_REQUEST;
+
+    /**
+     * The table <code>notify.send_task</code>.
+     */
+    public final SendTask SEND_TASK = SendTask.SEND_TASK;
+
+    /**
+     * The table <code>notify.sms_cloud_template</code>.
+     */
+    public final SmsCloudTemplate SMS_CLOUD_TEMPLATE = SmsCloudTemplate.SMS_CLOUD_TEMPLATE;
+
+    /**
+     * The table <code>notify.sms_template</code>.
+     */
+    public final SmsTemplate SMS_TEMPLATE = SmsTemplate.SMS_TEMPLATE;
+
+    /**
+     * The table <code>notify.template_channel</code>.
+     */
+    public final TemplateChannel TEMPLATE_CHANNEL = TemplateChannel.TEMPLATE_CHANNEL;
+
+    /**
+     * The table <code>notify.wx_miniapp_template</code>.
+     */
+    public final WxMiniappTemplate WX_MINIAPP_TEMPLATE = WxMiniappTemplate.WX_MINIAPP_TEMPLATE;
+
+    /**
+     * The table <code>notify.wx_offiaccount_template</code>.
+     */
+    public final WxOffiaccountTemplate WX_OFFIACCOUNT_TEMPLATE = WxOffiaccountTemplate.WX_OFFIACCOUNT_TEMPLATE;
 
     /**
      * No further instances allowed
@@ -54,7 +132,20 @@ public class Notify extends SchemaImpl {
     @Override
     public final List<Table<?>> getTables() {
         return Arrays.<Table<?>>asList(
-            Department.DEPARTMENT,
-            Employee.EMPLOYEE);
+            App.APP,
+            Channel.CHANNEL,
+            CorpWxTemplate.CORP_WX_TEMPLATE,
+            DingdingBotTemplate.DINGDING_BOT_TEMPLATE,
+            FeishuBotTemplate.FEISHU_BOT_TEMPLATE,
+            MailBotTemplate.MAIL_BOT_TEMPLATE,
+            PushTemplate.PUSH_TEMPLATE,
+            SendDetail.SEND_DETAIL,
+            SendRequest.SEND_REQUEST,
+            SendTask.SEND_TASK,
+            SmsCloudTemplate.SMS_CLOUD_TEMPLATE,
+            SmsTemplate.SMS_TEMPLATE,
+            TemplateChannel.TEMPLATE_CHANNEL,
+            WxMiniappTemplate.WX_MINIAPP_TEMPLATE,
+            WxOffiaccountTemplate.WX_OFFIACCOUNT_TEMPLATE);
     }
 }

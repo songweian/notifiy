@@ -9,10 +9,36 @@ import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.Internal;
 
-import pro.notifiy.server.jooq.tables.Department;
-import pro.notifiy.server.jooq.tables.Employee;
-import pro.notifiy.server.jooq.tables.records.DepartmentRecord;
-import pro.notifiy.server.jooq.tables.records.EmployeeRecord;
+import pro.notifiy.server.jooq.tables.App;
+import pro.notifiy.server.jooq.tables.Channel;
+import pro.notifiy.server.jooq.tables.CorpWxTemplate;
+import pro.notifiy.server.jooq.tables.DingdingBotTemplate;
+import pro.notifiy.server.jooq.tables.FeishuBotTemplate;
+import pro.notifiy.server.jooq.tables.MailBotTemplate;
+import pro.notifiy.server.jooq.tables.PushTemplate;
+import pro.notifiy.server.jooq.tables.SendDetail;
+import pro.notifiy.server.jooq.tables.SendRequest;
+import pro.notifiy.server.jooq.tables.SendTask;
+import pro.notifiy.server.jooq.tables.SmsCloudTemplate;
+import pro.notifiy.server.jooq.tables.SmsTemplate;
+import pro.notifiy.server.jooq.tables.TemplateChannel;
+import pro.notifiy.server.jooq.tables.WxMiniappTemplate;
+import pro.notifiy.server.jooq.tables.WxOffiaccountTemplate;
+import pro.notifiy.server.jooq.tables.records.AppRecord;
+import pro.notifiy.server.jooq.tables.records.ChannelRecord;
+import pro.notifiy.server.jooq.tables.records.CorpWxTemplateRecord;
+import pro.notifiy.server.jooq.tables.records.DingdingBotTemplateRecord;
+import pro.notifiy.server.jooq.tables.records.FeishuBotTemplateRecord;
+import pro.notifiy.server.jooq.tables.records.MailBotTemplateRecord;
+import pro.notifiy.server.jooq.tables.records.PushTemplateRecord;
+import pro.notifiy.server.jooq.tables.records.SendDetailRecord;
+import pro.notifiy.server.jooq.tables.records.SendRequestRecord;
+import pro.notifiy.server.jooq.tables.records.SendTaskRecord;
+import pro.notifiy.server.jooq.tables.records.SmsCloudTemplateRecord;
+import pro.notifiy.server.jooq.tables.records.SmsTemplateRecord;
+import pro.notifiy.server.jooq.tables.records.TemplateChannelRecord;
+import pro.notifiy.server.jooq.tables.records.WxMiniappTemplateRecord;
+import pro.notifiy.server.jooq.tables.records.WxOffiaccountTemplateRecord;
 
 
 /**
@@ -26,6 +52,28 @@ public class Keys {
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
-    public static final UniqueKey<DepartmentRecord> KEY_DEPARTMENT_PRIMARY = Internal.createUniqueKey(Department.DEPARTMENT, DSL.name("KEY_department_PRIMARY"), new TableField[] { Department.DEPARTMENT.ID }, true);
-    public static final UniqueKey<EmployeeRecord> KEY_EMPLOYEE_PRIMARY = Internal.createUniqueKey(Employee.EMPLOYEE, DSL.name("KEY_employee_PRIMARY"), new TableField[] { Employee.EMPLOYEE.ID }, true);
+    public static final UniqueKey<AppRecord> KEY_APP_PRIMARY = Internal.createUniqueKey(App.APP, DSL.name("KEY_app_PRIMARY"), new TableField[] { App.APP.ID }, true);
+    public static final UniqueKey<ChannelRecord> KEY_CHANNEL_PRIMARY = Internal.createUniqueKey(Channel.CHANNEL, DSL.name("KEY_channel_PRIMARY"), new TableField[] { Channel.CHANNEL.ID }, true);
+    public static final UniqueKey<CorpWxTemplateRecord> KEY_CORP_WX_TEMPLATE_PRIMARY = Internal.createUniqueKey(CorpWxTemplate.CORP_WX_TEMPLATE, DSL.name("KEY_corp_wx_template_PRIMARY"), new TableField[] { CorpWxTemplate.CORP_WX_TEMPLATE.ID }, true);
+    public static final UniqueKey<CorpWxTemplateRecord> KEY_CORP_WX_TEMPLATE_TEMPLATE_CODE = Internal.createUniqueKey(CorpWxTemplate.CORP_WX_TEMPLATE, DSL.name("KEY_corp_wx_template_template_code"), new TableField[] { CorpWxTemplate.CORP_WX_TEMPLATE.TEMPLATE_CODE }, true);
+    public static final UniqueKey<DingdingBotTemplateRecord> KEY_DINGDING_BOT_TEMPLATE_PRIMARY = Internal.createUniqueKey(DingdingBotTemplate.DINGDING_BOT_TEMPLATE, DSL.name("KEY_dingding_bot_template_PRIMARY"), new TableField[] { DingdingBotTemplate.DINGDING_BOT_TEMPLATE.ID }, true);
+    public static final UniqueKey<DingdingBotTemplateRecord> KEY_DINGDING_BOT_TEMPLATE_TEMPLATE_CODE = Internal.createUniqueKey(DingdingBotTemplate.DINGDING_BOT_TEMPLATE, DSL.name("KEY_dingding_bot_template_template_code"), new TableField[] { DingdingBotTemplate.DINGDING_BOT_TEMPLATE.TEMPLATE_CODE }, true);
+    public static final UniqueKey<FeishuBotTemplateRecord> KEY_FEISHU_BOT_TEMPLATE_PRIMARY = Internal.createUniqueKey(FeishuBotTemplate.FEISHU_BOT_TEMPLATE, DSL.name("KEY_feishu_bot_template_PRIMARY"), new TableField[] { FeishuBotTemplate.FEISHU_BOT_TEMPLATE.ID }, true);
+    public static final UniqueKey<FeishuBotTemplateRecord> KEY_FEISHU_BOT_TEMPLATE_TEMPLATE_CODE = Internal.createUniqueKey(FeishuBotTemplate.FEISHU_BOT_TEMPLATE, DSL.name("KEY_feishu_bot_template_template_code"), new TableField[] { FeishuBotTemplate.FEISHU_BOT_TEMPLATE.TEMPLATE_CODE }, true);
+    public static final UniqueKey<MailBotTemplateRecord> KEY_MAIL_BOT_TEMPLATE_PRIMARY = Internal.createUniqueKey(MailBotTemplate.MAIL_BOT_TEMPLATE, DSL.name("KEY_mail_bot_template_PRIMARY"), new TableField[] { MailBotTemplate.MAIL_BOT_TEMPLATE.ID }, true);
+    public static final UniqueKey<MailBotTemplateRecord> KEY_MAIL_BOT_TEMPLATE_TEMPLATE_CODE = Internal.createUniqueKey(MailBotTemplate.MAIL_BOT_TEMPLATE, DSL.name("KEY_mail_bot_template_template_code"), new TableField[] { MailBotTemplate.MAIL_BOT_TEMPLATE.TEMPLATE_CODE }, true);
+    public static final UniqueKey<PushTemplateRecord> KEY_PUSH_TEMPLATE_PRIMARY = Internal.createUniqueKey(PushTemplate.PUSH_TEMPLATE, DSL.name("KEY_push_template_PRIMARY"), new TableField[] { PushTemplate.PUSH_TEMPLATE.ID }, true);
+    public static final UniqueKey<PushTemplateRecord> KEY_PUSH_TEMPLATE_TEMPLATE_CODE = Internal.createUniqueKey(PushTemplate.PUSH_TEMPLATE, DSL.name("KEY_push_template_template_code"), new TableField[] { PushTemplate.PUSH_TEMPLATE.TEMPLATE_CODE }, true);
+    public static final UniqueKey<SendDetailRecord> KEY_SEND_DETAIL_PRIMARY = Internal.createUniqueKey(SendDetail.SEND_DETAIL, DSL.name("KEY_send_detail_PRIMARY"), new TableField[] { SendDetail.SEND_DETAIL.ID }, true);
+    public static final UniqueKey<SendRequestRecord> KEY_SEND_REQUEST_PRIMARY = Internal.createUniqueKey(SendRequest.SEND_REQUEST, DSL.name("KEY_send_request_PRIMARY"), new TableField[] { SendRequest.SEND_REQUEST.ID }, true);
+    public static final UniqueKey<SendTaskRecord> KEY_SEND_TASK_PRIMARY = Internal.createUniqueKey(SendTask.SEND_TASK, DSL.name("KEY_send_task_PRIMARY"), new TableField[] { SendTask.SEND_TASK.ID }, true);
+    public static final UniqueKey<SmsCloudTemplateRecord> KEY_SMS_CLOUD_TEMPLATE_PRIMARY = Internal.createUniqueKey(SmsCloudTemplate.SMS_CLOUD_TEMPLATE, DSL.name("KEY_sms_cloud_template_PRIMARY"), new TableField[] { SmsCloudTemplate.SMS_CLOUD_TEMPLATE.ID }, true);
+    public static final UniqueKey<SmsCloudTemplateRecord> KEY_SMS_CLOUD_TEMPLATE_TEMPLATE_CODE = Internal.createUniqueKey(SmsCloudTemplate.SMS_CLOUD_TEMPLATE, DSL.name("KEY_sms_cloud_template_template_code"), new TableField[] { SmsCloudTemplate.SMS_CLOUD_TEMPLATE.TEMPLATE_CODE }, true);
+    public static final UniqueKey<SmsTemplateRecord> KEY_SMS_TEMPLATE_PRIMARY = Internal.createUniqueKey(SmsTemplate.SMS_TEMPLATE, DSL.name("KEY_sms_template_PRIMARY"), new TableField[] { SmsTemplate.SMS_TEMPLATE.ID }, true);
+    public static final UniqueKey<SmsTemplateRecord> KEY_SMS_TEMPLATE_TEMPLATE_CODE = Internal.createUniqueKey(SmsTemplate.SMS_TEMPLATE, DSL.name("KEY_sms_template_template_code"), new TableField[] { SmsTemplate.SMS_TEMPLATE.TEMPLATE_CODE }, true);
+    public static final UniqueKey<TemplateChannelRecord> KEY_TEMPLATE_CHANNEL_PRIMARY = Internal.createUniqueKey(TemplateChannel.TEMPLATE_CHANNEL, DSL.name("KEY_template_channel_PRIMARY"), new TableField[] { TemplateChannel.TEMPLATE_CHANNEL.ID }, true);
+    public static final UniqueKey<WxMiniappTemplateRecord> KEY_WX_MINIAPP_TEMPLATE_PRIMARY = Internal.createUniqueKey(WxMiniappTemplate.WX_MINIAPP_TEMPLATE, DSL.name("KEY_wx_miniapp_template_PRIMARY"), new TableField[] { WxMiniappTemplate.WX_MINIAPP_TEMPLATE.ID }, true);
+    public static final UniqueKey<WxMiniappTemplateRecord> KEY_WX_MINIAPP_TEMPLATE_TEMPLATE_CODE = Internal.createUniqueKey(WxMiniappTemplate.WX_MINIAPP_TEMPLATE, DSL.name("KEY_wx_miniapp_template_template_code"), new TableField[] { WxMiniappTemplate.WX_MINIAPP_TEMPLATE.TEMPLATE_CODE }, true);
+    public static final UniqueKey<WxOffiaccountTemplateRecord> KEY_WX_OFFIACCOUNT_TEMPLATE_PRIMARY = Internal.createUniqueKey(WxOffiaccountTemplate.WX_OFFIACCOUNT_TEMPLATE, DSL.name("KEY_wx_offiaccount_template_PRIMARY"), new TableField[] { WxOffiaccountTemplate.WX_OFFIACCOUNT_TEMPLATE.ID }, true);
+    public static final UniqueKey<WxOffiaccountTemplateRecord> KEY_WX_OFFIACCOUNT_TEMPLATE_TEMPLATE_CODE = Internal.createUniqueKey(WxOffiaccountTemplate.WX_OFFIACCOUNT_TEMPLATE, DSL.name("KEY_wx_offiaccount_template_template_code"), new TableField[] { WxOffiaccountTemplate.WX_OFFIACCOUNT_TEMPLATE.TEMPLATE_CODE }, true);
 }

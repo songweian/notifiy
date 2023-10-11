@@ -18,6 +18,13 @@
         <name>org.jooq.codegen.JavaGenerator</name>
 
         <database>
+            <forcedTypes>
+                <forcedType>
+                    <userType>pro.notifiy.server.model.SendStatus</userType>
+                    <enumConverter>true</enumConverter>
+                    <includeExpression>send_status</includeExpression>
+                </forcedType>
+            </forcedTypes>
             <!-- The database type. The format here is:
                  org.jooq.meta.[database].[database]Database -->
             <name>org.jooq.meta.mysql.MySQLDatabase</name>

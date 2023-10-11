@@ -5,22 +5,25 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import pro.notifiy.server.api.vo.SendRequest;
 import pro.notifiy.server.core.HttpResult;
-import pro.notifiy.server.core.R;
-import pro.notifiy.server.service.UnionSendService;
+import pro.notifiy.server.send.CompositedUnionSendService;
 
+/**
+ * 消息发送
+ */
 @Slf4j
 @RequiredArgsConstructor
 @RestController
 public class SendController {
-    private final UnionSendService unionSendService;
+    private final CompositedUnionSendService compositedUnionSendService;
 
-    @PostMapping("/send")
+    /**
+     * 异步发送接口
+     */
+    @PostMapping("/api/union/async/send")
     public HttpResult send(@RequestBody SendRequest request) {
-        R<SendResult> sendResult = unionSendService.send(request);
-        if (sendResult.isError()) {
-            return HttpResult.error500();
-        }
-        return HttpResult.ok(sendResult.data());
+        compositedUnionSendService.send(request);
+        return HttpResult.ok();
     }
 }

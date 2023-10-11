@@ -4,8 +4,21 @@
 package pro.notifiy.server.jooq;
 
 
-import pro.notifiy.server.jooq.tables.Department;
-import pro.notifiy.server.jooq.tables.Employee;
+import pro.notifiy.server.jooq.tables.App;
+import pro.notifiy.server.jooq.tables.Channel;
+import pro.notifiy.server.jooq.tables.CorpWxTemplate;
+import pro.notifiy.server.jooq.tables.DingdingBotTemplate;
+import pro.notifiy.server.jooq.tables.FeishuBotTemplate;
+import pro.notifiy.server.jooq.tables.MailBotTemplate;
+import pro.notifiy.server.jooq.tables.PushTemplate;
+import pro.notifiy.server.jooq.tables.SendDetail;
+import pro.notifiy.server.jooq.tables.SendRequest;
+import pro.notifiy.server.jooq.tables.SendTask;
+import pro.notifiy.server.jooq.tables.SmsCloudTemplate;
+import pro.notifiy.server.jooq.tables.SmsTemplate;
+import pro.notifiy.server.jooq.tables.TemplateChannel;
+import pro.notifiy.server.jooq.tables.WxMiniappTemplate;
+import pro.notifiy.server.jooq.tables.WxOffiaccountTemplate;
 
 
 /**
@@ -15,12 +28,77 @@ import pro.notifiy.server.jooq.tables.Employee;
 public class Tables {
 
     /**
-     * The table <code>notify.department</code>.
+     * The table <code>notify.app</code>.
      */
-    public static final Department DEPARTMENT = Department.DEPARTMENT;
+    public static final App APP = App.APP;
 
     /**
-     * The table <code>notify.employee</code>.
+     * The table <code>notify.channel</code>.
      */
-    public static final Employee EMPLOYEE = Employee.EMPLOYEE;
+    public static final Channel CHANNEL = Channel.CHANNEL;
+
+    /**
+     * The table <code>notify.corp_wx_template</code>.
+     */
+    public static final CorpWxTemplate CORP_WX_TEMPLATE = CorpWxTemplate.CORP_WX_TEMPLATE;
+
+    /**
+     * The table <code>notify.dingding_bot_template</code>.
+     */
+    public static final DingdingBotTemplate DINGDING_BOT_TEMPLATE = DingdingBotTemplate.DINGDING_BOT_TEMPLATE;
+
+    /**
+     * The table <code>notify.feishu_bot_template</code>.
+     */
+    public static final FeishuBotTemplate FEISHU_BOT_TEMPLATE = FeishuBotTemplate.FEISHU_BOT_TEMPLATE;
+
+    /**
+     * The table <code>notify.mail_bot_template</code>.
+     */
+    public static final MailBotTemplate MAIL_BOT_TEMPLATE = MailBotTemplate.MAIL_BOT_TEMPLATE;
+
+    /**
+     * The table <code>notify.push_template</code>.
+     */
+    public static final PushTemplate PUSH_TEMPLATE = PushTemplate.PUSH_TEMPLATE;
+
+    /**
+     * The table <code>notify.send_detail</code>.
+     */
+    public static final SendDetail SEND_DETAIL = SendDetail.SEND_DETAIL;
+
+    /**
+     * The table <code>notify.send_request</code>.
+     */
+    public static final SendRequest SEND_REQUEST = SendRequest.SEND_REQUEST;
+
+    /**
+     * The table <code>notify.send_task</code>.
+     */
+    public static final SendTask SEND_TASK = SendTask.SEND_TASK;
+
+    /**
+     * The table <code>notify.sms_cloud_template</code>.
+     */
+    public static final SmsCloudTemplate SMS_CLOUD_TEMPLATE = SmsCloudTemplate.SMS_CLOUD_TEMPLATE;
+
+    /**
+     * The table <code>notify.sms_template</code>.
+     */
+    public static final SmsTemplate SMS_TEMPLATE = SmsTemplate.SMS_TEMPLATE;
+
+    /**
+     * The table <code>notify.template_channel</code>.
+     */
+    public static final TemplateChannel TEMPLATE_CHANNEL = TemplateChannel.TEMPLATE_CHANNEL;
+
+    /**
+     * The table <code>notify.wx_miniapp_template</code>.
+     */
+    public static final WxMiniappTemplate WX_MINIAPP_TEMPLATE = WxMiniappTemplate.WX_MINIAPP_TEMPLATE;
+
+    /**
+     * The table <code>notify.wx_offiaccount_template</code>.
+     */
+    public static final WxOffiaccountTemplate WX_OFFIACCOUNT_TEMPLATE = WxOffiaccountTemplate.WX_OFFIACCOUNT_TEMPLATE;
 }

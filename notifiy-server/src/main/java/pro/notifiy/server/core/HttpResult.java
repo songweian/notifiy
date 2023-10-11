@@ -1,5 +1,8 @@
 package pro.notifiy.server.core;
 
+import lombok.Getter;
+
+@Getter
 public class HttpResult {
 
     protected final String code;

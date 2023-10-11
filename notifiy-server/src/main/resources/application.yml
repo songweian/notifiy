@@ -12,5 +12,5 @@ spring:
 #    database-platform: org.hibernate.dialect.H2Dialect
 #    hibernate:
 #      ddl-auto: create-drop
-# h2 init V1_0__create_employee_schema.sql
-#spring.datasource.schema: classpath:db-schema/V1_0__create_employee_schema.sql
+# h2 init V1_0__common.sql
+#spring.datasource.schema: classpath:db-schema/V1_0__common.sql
