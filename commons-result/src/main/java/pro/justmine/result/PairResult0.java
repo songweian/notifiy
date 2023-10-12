@@ -1,6 +1,6 @@
 package pro.justmine.result;
 
-public interface PairResult<R, E> extends Result {
+public interface PairResult0<R, E> extends Result0 {
 
     R data();
 

@@ -4,12 +4,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jooq.DSLContext;
 import org.springframework.stereotype.Service;
+import pro.justmine.gson.GsonUtils;
 import pro.notifiy.server.api.vo.SendRequest;
 import pro.notifiy.server.jooq.tables.records.SendRequestRecord;
 import pro.notifiy.server.model.InnerSendRequest;
 import pro.notifiy.server.model.SendStatus;
 import pro.notifiy.server.model.TargetType;
-import pro.notifiy.server.utils.JsonUtils;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -41,8 +41,8 @@ public class CompositedUnionSendService implements UnionSendService {
         sendRequestRecord.setBatchId("");
         sendRequestRecord.setTemplateCode(request.getTemplateCode());
         sendRequestRecord.setTargetType(request.getTargetType().name());
-        sendRequestRecord.setTargetList(JsonUtils.toJsonQuietly(request.getTargetList()));
-        sendRequestRecord.setTemplateParams(JsonUtils.toJsonQuietly(request.getContentParams()));
+        sendRequestRecord.setTargetList(GsonUtils.toJsonQuietly(request.getTargetList()));
+        sendRequestRecord.setTemplateParams(GsonUtils.toJsonQuietly(request.getContentParams()));
         sendRequestRecord.setSendStatus(SendStatus.INIT);
         sendRequestRecord.setSendTime(null);
         sendRequestRecord.setSendResult("");

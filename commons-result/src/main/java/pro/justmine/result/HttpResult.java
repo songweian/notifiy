@@ -1,6 +1,6 @@
 package pro.justmine.result;
 
-public interface HttpResult extends Result {
+public interface HttpResult extends Result0 {
 
     boolean isSuccess();
 

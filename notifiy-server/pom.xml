@@ -17,28 +17,8 @@
     <dependencies>
         <dependency>
             <groupId>pro.justmine</groupId>
-            <artifactId>commons-result</artifactId>
-            <version>${revsion}</version>
-        </dependency>
-        <dependency>
-            <groupId>pro.justmine</groupId>
-            <artifactId>commons-gson</artifactId>
-            <version>${revsion}</version>
-        </dependency>
-        <dependency>
-            <groupId>pro.justmine</groupId>
-            <artifactId>commons-jooq</artifactId>
-            <version>${revsion}</version>
-        </dependency>
-        <dependency>
-            <groupId>pro.justmine</groupId>
-            <artifactId>commons-mdc</artifactId>
-            <version>${revsion}</version>
-        </dependency>
-        <dependency>
-            <groupId>pro.justmine</groupId>
-            <artifactId>commons-webfilter</artifactId>
-            <version>${revsion}</version>
+            <artifactId>commons-all</artifactId>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel.springboot</groupId>
