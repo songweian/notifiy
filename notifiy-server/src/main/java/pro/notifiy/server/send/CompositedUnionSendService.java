@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jooq.DSLContext;
 import org.springframework.stereotype.Service;
-import pro.justmine.gson.GsonUtils;
+import work.keepcode.gson.GsonUtils;
 import pro.notifiy.server.api.vo.SendRequest;
 import pro.notifiy.server.jooq.tables.records.SendRequestRecord;
 import pro.notifiy.server.model.InnerSendRequest;

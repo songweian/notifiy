@@ -17,16 +17,6 @@
     </properties>
 
     <modules>
-        <module>commons-lang</module>
-        <module>commons-result</module>
-        <module>commons-codec</module>
-        <module>commons-mdc</module>
-        <module>commons-gson</module>
-        <module>commons-xml</module>
-        <module>commons-jooq</module>
-        <module>commons-webfilter</module>
-        <module>commons-all</module>
-        <module>commons-jooq-generator</module>
         <module>notifiy-server</module>
     </modules>
     <dependencyManagement>
